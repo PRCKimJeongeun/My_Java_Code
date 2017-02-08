@@ -1,0 +1,23 @@
+/**
+ * Created by wojia on 2017/2/7.
+ */
+public class CharDemo
+{
+    public static void main(String args[])
+    {
+
+         //* char类型的输出 表达
+         //* char表达分四种:
+         //* 1.以''括起来
+         //* 2.char xx= ASCII表中符号对应的int数值
+         //* 3.以二进制表示 前缀/u
+
+
+        char c1='&';
+        char c2=97;
+         char c3=0x0016;
+        System.out.println(c1);
+        System.out.println(c2);
+        System.out.println(c3);
+    }
+}

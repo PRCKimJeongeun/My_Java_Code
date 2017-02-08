@@ -1,0 +1,49 @@
+package dataForm;
+
+/**
+ * Created by wojia on 2017/2/8.
+ */
+public class Over_Flow
+{
+    public static void main(String args[])
+    {
+        /**
+         * for（initialization; condition; update）
+         * {
+               statements;
+           }
+           for语句执行时，首先执行初始化操作（initialization），
+           然后判断条件表达式（ condition）是否满足，如果满足条件，
+           执行循环体中的语句，
+         !!!!再执行迭代部分（update）!!!!!!，完成一次循环。
+           下次循环从判断终止条件开始，根据结果进行相应的操作。
+         */
+
+        int intmax=2147483647;
+        int intmin=-2147483648;
+
+        /**
+         * explanation:
+
+         0b01111111_11111111_11111111_11111111
+         //2147483647(binary) 记住当前最高位为符号位!!所以真正表示数值的只有31位
+
+         */
+        intmax=intmax+1;
+        System.out.println(intmax);//result:-2147483648
+
+        intmin=intmin-1;
+        System.out.println(intmin);//result:2147483647
+
+       //Calculate  2^31=2147483648
+        int c=1;
+        for (int i=1;i<=31;i++)
+        {
+            c*=2;
+            System.out.println(c);//the last result is -2147483648 = 0b10000000__0000000_0000000
+        }
+
+            System.out.println(c*2);// result is zero!!!! overflow!
+
+    }
+}

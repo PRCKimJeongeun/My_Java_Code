@@ -1,0 +1,39 @@
+/**
+ * Created by wojia on 2017/2/8.
+ */
+public class TYPE_ConvertDemo
+{
+    public static void main(String args[])
+    {
+        // *byte<short,char<int<long<float<double ****
+        byte b1=6;
+        short s1=b1;
+        int i1=s1;
+        long l1=i1;
+        float f1=l1;
+        double d1=f1;
+       // *b1=d1 is not available
+
+        float t = (float)d1;//强制转换
+
+        System.out.println("t= "+t);
+        int t2 =(int)3.14;//int t2 =3.14 was wrong!
+        int t3 =(int)(3.14+2.15);
+        System.out.println("t2= "+t2);
+        System.out.println("t3= "+t3);
+
+        byte b2=125;
+        // 125并没有超出byte的范围,所以不会报错
+        System.out.println("b2= "+b2);
+
+        /**
+         * 接下来是表达式的自动提升:
+         * 当一个运算式中有多种数据类型(boolean除外),真个算术表达式的数据类型将在数据运算时出现自动提升
+         * 规则为真个表达式的最终结果被提升为表达式中类型最高的类型.
+         */
+        //有趣的小测试
+        System.out.println('A');//output A
+        System.out.println('A'+1);//char 与 int 同在一个运算表达式,最终结果为 int类型 就是 66
+    
+    }
+}

@@ -11,7 +11,7 @@ public class Assigning_Operators_Test
             short s1=1;
             //这个时候s1=s1+1;会出错 因为 1会默认是int类型
 
-            s1+=4;//不会报错 表明 +=具有隐式转换功能!!!
+            s1+=4;//不会报错 表明 +=具有隐式转换功能!!! 等价于 s1=(int)s1+4
         }
 
 }

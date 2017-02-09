@@ -1,0 +1,27 @@
+public class Arithmetic_Operator_Test
+{
+    public static void main(String args[])
+    {
+        //两个字符相加,结果为其ASCII值和
+        System.out.println('A' + 'B');//>>131
+
+        //System.out.println(100 / 0); Exception: / by zero
+
+        System.out.println(100.0 / 0);//output infinity
+        //因为100.0为double 运算式0也被转换成 double
+        System.out.println(-100.0 / 0);//output -infinity
+
+        System.out.println(0.0 / 0.0);//NaN
+        //NaN有个特点 自己不等于自己
+        double d1=0.0 / 0.0+1.0;// NaN
+        System.out.println(d1==d1);//false
+        System.out.println(10%3);// 1 模运算
+
+        //++ -- 的问题
+        int a=1;
+        int b=a++;
+        System.out.println(b);//output 1
+        System.out.println(a++);//output 2
+        System.out.println(++a);//output 4
+    }
+}

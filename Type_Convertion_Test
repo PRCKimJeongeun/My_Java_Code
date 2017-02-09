@@ -35,5 +35,11 @@ public class TYPE_ConvertDemo
         System.out.println('A');//output A
         System.out.println('A'+1);//char 与 int 同在一个运算表达式,最终结果为 int类型 就是 66
     
+    
+        //还有String 类型 ,任何类型与String组成表达式 最后的结果都是 String!!
+        double s2=2+3.14+2.1f;
+        String s3="我不知道打什么好 "+2+3.14+2.1f;
+
+        System.out.println(s3);
     }
 }

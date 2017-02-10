@@ -1,0 +1,49 @@
+/**
+ * Created by wojia on 2017/2/9.
+ */
+public class Logical_Operators_Test
+{
+    public static void main(String args[])
+    {
+        /**
+         * The Difference between & and &&
+         * */
+        System.out.println(true & true);//true
+        System.out.println(true & false);//false
+        System.out.println(false & true);//false
+        System.out.println(false & false);//false
+        System.out.println("------------------------------");
+        System.out.println(true && true);//true
+        System.out.println(true && false);//false
+        System.out.println(false && true);//false
+        System.out.println(false && false);//false
+        System.out.println("------------------------------");
+
+        System.out.println(false && (1/0==1));
+        //false//no exception ,which means that after the"false"not equal 1,the compiler break
+
+        // System.out.println(false & (1/0==1)); //exception occur
+
+        /** conclusion : && is of higher efficiency */
+
+        /**
+         * The Difference between | and || 只有两边表达式都为false 表达式值才为 false
+         * */
+        System.out.println(true | true);//true
+        System.out.println(true | false);//true
+        System.out.println(false | true);//true
+        System.out.println(false | false);//false
+        /** ||中当左边式子为TRUE 马上break 返回true 不作更多解释 */
+
+        /**
+         *  " ^ " operator 两边同值 返回false 否则 true
+         * */
+        System.out.println(true ^ true);//false
+        System.out.println(true ^ false);//true
+        System.out.println(false ^ true);//true
+        System.out.println(false ^ false);//false
+
+        // ! operator
+        System.out.println(!true ^ !true);//false
+    }
+}
